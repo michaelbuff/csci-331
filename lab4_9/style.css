@@ -14,8 +14,8 @@ html{
 }
 div.offer{
     display: inline-block;
-    width: 400;
-    margin: 4;
+    width: 400px;
+    margin: 4px;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 1px;
