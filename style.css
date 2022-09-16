@@ -1,0 +1,39 @@
+header{
+    text-align: center;
+    background-color: burlywood;
+    margin: -8px -8px 0px -8px;
+    padding: 20px;
+    border-bottom: 2px solid black;
+}
+section{
+    padding: 5px;
+    border-bottom: 1px solid grey;
+}
+#calendar table, th, td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+  }
+  
+#calendar td:hover{
+    background-color: aqua;
+}
+
+footer{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.flexitem{
+    min-width: 150px;
+    min-height: 100px;
+    background-color: burlywood;
+    border-radius: 5px;
+    border: 2px solid black;
+    text-align: center;
+    margin: 20px;
+    vertical-align: middle;
+}
