@@ -1,8 +1,13 @@
+#header{
+    position: sticky;
+    top: 0px;
+}
+
 header{
     text-align: center;
     background-color: burlywood;
     margin: -8px -8px 0px -8px;
-    padding: 20px;
+    padding: 8px;
     border-bottom: 2px solid black;
 }
 section{
@@ -22,18 +27,24 @@ footer{
     text-align: center;
 }
 
-.container{
+.flexcontainer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-.flexitem{
+.HWflexitem{
     min-width: 150px;
     min-height: 100px;
-    background-color: burlywood;
+    background-color: rgb(222, 184, 135);
     border-radius: 5px;
     border: 2px solid black;
     text-align: center;
     margin: 20px;
     vertical-align: middle;
+    box-shadow: 5px 5px 5px grey;
+}
+.HWflexitem:hover{
+    background-color: rgb(212, 174, 125);
+    box-shadow: 1px 1px 5px grey;
+
 }
