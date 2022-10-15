@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
+
+    <title>LAMP</title>
+</head>
+
+<body>
+    <h1>Is this good for the economy?</h1>
+    <h2>Let me know your opinion</h2>
+
+<div id="article">
+    <form action="php/vote.php" method="get">  
+        <div id="apiData">
+            <!-- random user data goes here -->
+        </div>
+    
+        <div id="btns">
+            <input type="radio" id="good" name="choice" value="good"required>
+            <label for="good">good!</label>
+            <input type="radio" id="bad" name="choice" value="bad">
+            <label for="bad">bad!</label>
+            <label for="name">Name:</label>   
+            <input type="text" id="name" name="name" required>
+            <input type="submit" id="submit" value="vote!">
+        </div>
+    </form>
+</div>
+</body>
+
+</html>
