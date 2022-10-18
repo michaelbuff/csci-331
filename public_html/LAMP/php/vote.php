@@ -16,11 +16,13 @@
 
 <?php
 // DYNAMIC HTML
+$user = $_GET['username'];
 $name = $_GET['name'];
-$headline = $_GET['headline'];
 $choice = $_GET['choice'];
+$country = $_GET['country'];
 
-echo "<p><strong>$name</strong> thinks <strong>$headline</strong> is <strong>$choice</strong> for the economy</p>";
+
+echo "<p><strong>$user</strong> $choice met <strong>$name</strong> from $country</p>";
 
 
 // DATABASE OPERATIONS:
@@ -29,7 +31,7 @@ $servername = "localhost";
 $username = "user06";
 $password = "06poco";
 $dbname = "db06";
-$tablename = "votes";
+$tablename = "meetings";
 
 // Create connection (assuming these exist -- we set up the DB on the CLI)
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -40,7 +42,7 @@ if ($conn->connect_error) {
 }
 
 // SQL OPPERATIONS
-$sql = "INSERT INTO votes VALUES ('$name','$headline','$choice')";
+$sql = "INSERT INTO meetings VALUES ('$user','$choice','$name','$country')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
@@ -48,17 +50,17 @@ if ($conn->query($sql) === TRUE) {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-echo "<h1>Here is how the other students voted</h1>";
+echo "<h1>Here is who other students have met   </h1>";
 
 // Select students that have a GPA equal to or above 2.0
-$sql = "SELECT * FROM votes";
+$sql = "SELECT * FROM meetings";
 
 // Issue the query
 $statement = $conn->query($sql);
 
 // Loop through all the rows returned by the query
 foreach ($statement as $row) {
-   echo "<p> $row[name] thinks $row[headline] is $row[choice] for the economy</p>";
+   echo "<p>".$row['username']." " .$row['choice']." met ".$row['name']." from ".$row['country'].".</p>";
 }
 
 

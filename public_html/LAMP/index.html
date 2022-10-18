@@ -11,8 +11,7 @@
 </head>
 
 <body>
-    <h1>Is this good for the economy?</h1>
-    <h2>Let me know your opinion</h2>
+    <h1>Have you met this person?</h1>
 
 <div id="article">
     <form action="php/vote.php" method="get">  
@@ -21,12 +20,13 @@
         </div>
     
         <div id="btns">
-            <input type="radio" id="good" name="choice" value="good"required>
-            <label for="good">good!</label>
-            <input type="radio" id="bad" name="choice" value="bad">
-            <label for="bad">bad!</label>
-            <label for="name">Name:</label>   
-            <input type="text" id="name" name="name" required>
+            <input type="radio" id="has" name="choice" value="has"required>
+            <label for="has">I have!</label>
+            <input type="radio" id="has not" name="choice" value="has not">
+            <label for="has not">I have not!</label>
+            <br>
+            <label for="username">Name:</label>   
+            <input type="text" id="username" name="username" required>
             <input type="submit" id="submit" value="vote!">
         </div>
     </form>
